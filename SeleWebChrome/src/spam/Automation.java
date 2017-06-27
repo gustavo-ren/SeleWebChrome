@@ -8,16 +8,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Automation {
 
 	public static void main(String[] args) throws InterruptedException {
-		// Optional, if not specified, WebDriver will search your path for chromedriver.
+		// Caminho caso o chromedriver nao esteja no path
 		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Gustavo\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
 		  WebDriver driver = new ChromeDriver();
 		  driver.get("http://www.google.com/xhtml");
-		  Thread.sleep(5000);  // Let the user actually see something!
+		  Thread.sleep(5000);  // Tempo de espera
 		  WebElement searchBox = driver.findElement(By.name("q"));
-		  searchBox.sendKeys("ChromeDriver");
+		  searchBox.sendKeys("Game of Thrones");
 		  searchBox.submit();
-		  Thread.sleep(5000);  // Let the user actually see something!
+		  Thread.sleep(5000);  // Tempo de espera
 		  driver.quit();
 
 	}
